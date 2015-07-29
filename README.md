@@ -39,6 +39,7 @@ Running 4m test @ http://localhost:8889/
 Requests/sec:  17486.58
 Transfer/sec:      2.47MB
 ```
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_fork/basic_pm2_fork.png)
 
 ### pm2 (cluster mode):
 
@@ -52,6 +53,8 @@ Running 4m test @ http://localhost:8889/
 Requests/sec:  15076.75
 Transfer/sec:      2.13MB
 ```
+
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/basic_cluster.png)
 
 ## Express server
 
@@ -84,6 +87,8 @@ Requests/sec:  14534.20
 Transfer/sec:      1.89MB
 ```
 
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_fork/express_pm2_fork.png)
+
 ### pm2 (cluster mode)
 
 ```
@@ -96,6 +101,7 @@ Running 4m test @ http://localhost:8888/
 Requests/sec:  12031.85
 Transfer/sec:      1.56MB
 ```
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/express_cluster.png)
 
 ## Sails
 
@@ -117,6 +123,8 @@ Requests/sec:    528.88
 Transfer/sec:      5.73MB
 ```
 
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_fork/sails_pm2_fork.png)
+
 ### pm2 (cluster mode)
 
 ```
@@ -130,3 +138,5 @@ Running 4m test @ http://localhost:1337/
 Requests/sec:    450.84
 Transfer/sec:      4.88MB
 ```
+
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/sails_cluster.png)
