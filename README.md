@@ -174,6 +174,8 @@ Transfer/sec:      4.88MB
 
 ## Hapijs
 
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/hapi.png)
+
 ```
 Running 4m test @ http://localhost:8887
   12 threads and 400 connections
