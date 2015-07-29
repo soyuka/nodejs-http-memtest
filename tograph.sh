@@ -1,7 +1,7 @@
 #!/bin/bash
 
 file=$1
-tail -n +8 $1 > data.csv
+# tail -n +8 $1 > data.csv
 
 gnuplot <<- EOF
         set terminal png
@@ -13,7 +13,7 @@ gnuplot <<- EOF
         set timefmt "%H:%M:%S"
         set format x "%M:%S"
         set datafile separator ","
-        plot "data.csv" using 1:(\$2/1024/1024) title "Used" with lines
+        plot "$file" using 1:(\$2/1024/1024) title "Used" with lines
 EOF
 
-rm data.csv
+# rm data.csv
