@@ -8,12 +8,6 @@
 
 3. Generate graph with `bash tograph.sh [file].csv` (this is using gnuplot)
 
-**When using pm2, everything was running together, performances showed by wrk won't reflect reality!**
-
-When using the cluster for example, I had 12 node processes for 3 different web servers and CPU had a hard time (100% on each core):
-
-![](https://pbs.twimg.com/media/CLFQaX3WcAAzAT_.png:large)
-
 ## Basic http server
 
 ```javascript
@@ -144,3 +138,17 @@ Transfer/sec:      4.88MB
 ```
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/sails_cluster.png)
+
+## A word 
+
+**When using pm2, everything was running together, performances showed by wrk won't reflect reality!** In theory the cluster mode is way more performant than the fork mode but when your cpu has no more room to treat the threads it's obviously decreasing performances. 
+
+When using the cluster for example, I had 12 node processes for 3 different web servers and CPU had a hard time (100% on each core):
+
+![](https://pbs.twimg.com/media/CLFQaX3WcAAzAT_.png:large)
+
+Test PC:
+
+- Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz
+- 8Gb total mem
+- SSD
