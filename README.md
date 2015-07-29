@@ -8,7 +8,11 @@
 
 3. Generate graph with `bash tograph.sh [file].csv` (this is using gnuplot)
 
-When using pm2, everything was running together, performances showed by wrk won't reflect reality!
+**When using pm2, everything was running together, performances showed by wrk won't reflect reality!**
+
+When using the cluster for example, I had 12 node processes for 3 different web servers and CPU had a hard time (100% on each core):
+
+![](https://pbs.twimg.com/media/CLFQaX3WcAAzAT_.png:large)
 
 ## Basic http server
 
