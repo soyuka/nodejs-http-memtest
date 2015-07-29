@@ -125,6 +125,8 @@ Transfer/sec:      1.56MB
 
 ## Sails
 
+#### With sessions (default app):
+
 Use `sails new sometest && cd sometest && sails lift`, get pid and collect data.
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/sails.png)
@@ -171,6 +173,58 @@ Transfer/sec:      4.88MB
 ```
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/sails_cluster.png)
+
+#### Without sessions:
+
+```javascript
+//.sailsrc
+"hooks": {
+  "session": false
+}
+//config/http.js
+
+module.exports.http = {
+  middleware: {
+    order: [
+      'startRequestTimer',
+      'cookieParser',
+      // 'session',
+      'myRequestLogger',
+      'bodyParser',
+      'handleBodyParserError',
+      'compress',
+      'methodOverride',
+      'poweredBy',
+      '$custom',
+      'router',
+      'www',
+      'favicon',
+      '404',
+      '500'
+    ],
+  },
+}
+```      
+
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/sails_no_session.png)
+
+```
+> Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz
+> 16gb mem
+> ssd
+
+Running 4m test @ http://localhost:1337/
+  12 threads and 400 connections
+
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   402.79ms   36.93ms 909.55ms   84.07%
+    Req/Sec    88.65     73.55   323.00     71.15%
+  142331 requests in 4.00m, 1.49GB read
+  Socket errors: connect 157, read 87, write 7, timeout 0
+Requests/sec:    592.79
+Transfer/sec:      6.34MB
+❯
+```
 
 ## Hapijs
 
