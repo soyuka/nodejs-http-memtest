@@ -2,11 +2,13 @@
 
 ## Data collection
 
-Test with `wrk -c400 -t12 -d4m http://localhost:[PORT]/`
-Collect data with `node memorypid.js [PID] [name].csv`
-Generate graph with `bash tograph.sh [file].csv` (is using gnuplot)
+1. Test with `wrk -c400 -t12 -d4m http://localhost:[PORT]/`
 
-Generate
+2. Collect data with `node memorypid.js [PID] [name].csv`
+
+3. Generate graph with `bash tograph.sh [file].csv` (this is using gnuplot)
+
+
 ## Basic http server
 
 ```javascript
