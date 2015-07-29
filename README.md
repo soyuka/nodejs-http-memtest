@@ -25,6 +25,17 @@ srv.listen(8889, '127.0.0.1', function() {
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/basic.png)
 
+```
+Running 4m test @ http://localhost:8889
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.66ms    4.00ms 719.74ms   98.63%
+    Req/Sec     1.61k   164.35     5.34k    89.63%
+  4597543 requests in 4.00m, 648.91MB read
+Requests/sec:  19152.29
+Transfer/sec:      2.70MB
+```
+
 ### pm2 (fork mode):
 
 ```
@@ -72,6 +83,17 @@ app.listen(8888)
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/express.png)
 
+```
+Running 4m test @ http://localhost:8888
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.19ms    2.18ms 249.77ms   91.04%
+    Req/Sec     1.31k   138.16     4.33k    90.37%
+  3754626 requests in 4.00m, 486.97MB read
+Requests/sec:  15640.64
+Transfer/sec:      2.03MB
+```
+
 ### pm2 (fork mode)
 
 ```
@@ -106,6 +128,17 @@ Transfer/sec:      1.56MB
 Use `sails new sometest && cd sometest && sails lift`, get pid and collect data.
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/sails.png)
+
+```
+Running 4m test @ http://localhost:1337
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   657.31ms  170.23ms   1.92s    88.50%
+    Req/Sec    53.02     34.70   323.00     91.55%
+  144389 requests in 4.00m, 1.53GB read
+Requests/sec:    601.40
+Transfer/sec:      6.52MB
+```
 
 ### pm2 (fork mode)
 
