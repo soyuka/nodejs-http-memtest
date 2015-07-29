@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.1",
+    "hapi": "^8.8.0",
     "pidusage": "^0.1.1"
   }
 }

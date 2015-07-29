@@ -172,6 +172,19 @@ Transfer/sec:      4.88MB
 
 ![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/pm2_cluster/sails_cluster.png)
 
+## Hapijs
+
+```
+Running 4m test @ http://localhost:8887
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   107.35ms   49.70ms 344.07ms   70.62%
+    Req/Sec   316.80     99.39   797.00     73.20%
+  906505 requests in 4.00m, 171.21MB read
+Requests/sec:   3775.56
+Transfer/sec:    730.19KB
+```
+
 ## A word 
 
 **When using pm2, everything was running together, performances showed by wrk won't reflect reality!** In theory the cluster mode is way more performant than the fork mode but when your cpu has no more room to treat the threads it's obviously decreasing performances. 
