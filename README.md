@@ -22,6 +22,8 @@ srv.listen(8889, '127.0.0.1', function() {
 })
 ```
 
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/basic.png)
+
 ## Express server
 
 ```javascript
@@ -38,7 +40,11 @@ console.log(process.pid)
 app.listen(8888)
 ```
 
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/express.png)
+
 ## Sails
 
 Use `sails new sometest && cd sometest && sails lift`, get pid and collect data.
 
+
+![](https://raw.githubusercontent.com/soyuka/nodejs-http-memtest/master/4minwrk/sails.png)
